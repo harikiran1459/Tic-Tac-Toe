@@ -5,8 +5,13 @@ import { v4 as uuidv4 } from "uuid";
 import bcrypt from "bcrypt";
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: ["https://Tic-Tac-Toe.vercel.app"],
+  methods: ["POST", "GET"],
+  credentials: true
+}));
 app.use(express.json());
+
 const api_key = "w6j65gfn5sfu";
 const api_secret =
   "9jbxttsbbghztpdnq482e4w8apgq7nvm33veuz8mwcg7wwzkvj6qrsg3scu48y4r";
