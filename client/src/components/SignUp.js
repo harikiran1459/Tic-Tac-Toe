@@ -8,7 +8,7 @@ function SignUp({ setIsAuth }) {
   Axios.defaults.withCredentials = true;
 
   const signUp = () => {
-    Axios.post("http://tic-tac-toe-vert-two-99.vercel.app/signup", user).then((res) => {
+    Axios.post("https://tic-tac-toe-vert-two-99.vercel.app/signup", user).then((res) => {
       const { token, userId, firstName, lastName, username, hashedPassword } =
         res.data;
       cookies.set("token", token);
