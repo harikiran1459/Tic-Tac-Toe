@@ -5,7 +5,7 @@ import Cookies from "universal-cookie";
 function Login({ setIsAuth }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  axios.default.withCredentials = true;
+  axios.defaults.withCredentials = true;
 
   const cookies = new Cookies();
   const login = () => {
