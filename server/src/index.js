@@ -5,11 +5,13 @@ import { v4 as uuidv4 } from "uuid";
 import bcrypt from "bcrypt";
 const app = express();
 
-app.use(cors({
-  origin: ["https://tic-tac-toe-frontend-seven.vercel.app"],
-  methods: ["POST", "GET"],
-  credentials: true
-}));
+const corsOptions = {
+  origin: "https://tic-tac-toe-frontend-seven.vercel.app",
+  methods: ["POST", "GET"], 
+  credentials: true, 
+};
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 
 app.use(express.json());
 
