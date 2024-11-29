@@ -6,10 +6,11 @@ import bcrypt from "bcrypt";
 const app = express();
 
 app.use(cors({
-  origin: ["https://tic-tac-toe-vert-two-99.vercel.app"],
+  origin: ["*"],
   methods: ["POST", "GET"],
   credentials: true
 }));
+
 app.use(express.json());
 
 const api_key = "w6j65gfn5sfu";
