@@ -6,7 +6,7 @@ import bcrypt from "bcrypt";
 const app = express();
 
 app.use(cors({
-  origin: ["https://Tic-Tac-Toe.vercel.app"],
+  origin: ["https://tic-tac-toe-vert-two-99.vercel.app"],
   methods: ["POST", "GET"],
   credentials: true
 }));
