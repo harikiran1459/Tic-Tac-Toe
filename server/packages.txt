@@ -1,0 +1,6 @@
+axios
+universal-cookie
+nodemon
+uuid
+cors
+bcrypt
