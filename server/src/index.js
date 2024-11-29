@@ -7,7 +7,14 @@ import dotenv from "dotenv";
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: "https://tic-tac-toe-frontend-seven.vercel.app",
+  methods: ["POST", "GET"], 
+  credentials: true, 
+};
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
+
 app.use(express.json());
 dotenv.config();
 const api_key = process.env.API_KEY;

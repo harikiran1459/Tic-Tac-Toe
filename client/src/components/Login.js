@@ -5,10 +5,11 @@ import Cookies from "universal-cookie";
 function Login({ setIsAuth }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  Axios.defaults.withCredentials = true;
 
   const cookies = new Cookies();
   const login = () => {
-    Axios.post("http://localhost:3001/login", {
+    Axios.post("https://tic-tac-toe-vert-two-99.vercel.app/login", {
       username,
       password,
     }).then((res) => {
